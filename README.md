@@ -1,12 +1,8 @@
 # golang-testing
 How to unit, integration and functional test in Go
 
-Firts attempts with Golang
-A small test to learn about go, go modules and the standard go project layout
 
-
-
-License
+## License
 
 MIT License
 
