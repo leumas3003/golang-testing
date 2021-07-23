@@ -1,6 +1,12 @@
 # golang-testing
 How to unit, integration and functional test in Go
 
+## Package Used
+
+| Function| Package|
+|-------|--|
+| HTTP  | https://echo.labstack.com/ |
+| Assert | https://github.com/stretchr/testify |
 
 ## License
 

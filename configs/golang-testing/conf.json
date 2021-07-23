@@ -1,0 +1,16 @@
+{
+    "database": {
+      "user": "samuelmartel",
+      "password": "",
+      "host": "localhost",
+      "port": 5432,
+      "dbName": "samuelmartel"
+    },
+    "messaging": {
+      "url": "localhost:4222"
+    },
+    "httpserver": {
+      "addr": "localhost:3001"
+    }
+  }
+  
