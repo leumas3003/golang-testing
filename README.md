@@ -7,6 +7,7 @@ How to unit, integration and functional test in Go
 |-------|--|
 | HTTP  | https://echo.labstack.com/ |
 | Assert | https://github.com/stretchr/testify |
+| Mock | https://github.com/golang/mock |
 
 ## License
 
