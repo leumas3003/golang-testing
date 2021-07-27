@@ -1,0 +1,79 @@
+definitions:
+  errors.ApiError:
+    properties:
+      error:
+        type: string
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  locations.Country:
+    properties:
+      geo_information:
+        $ref: '#/definitions/locations.GeoInformation'
+      id:
+        type: string
+      name:
+        type: string
+      states:
+        items:
+          $ref: '#/definitions/locations.State'
+        type: array
+      time_zone:
+        type: string
+    type: object
+  locations.GeoInformation:
+    properties:
+      location:
+        $ref: '#/definitions/locations.GeoLocation'
+    type: object
+  locations.GeoLocation:
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+    type: object
+  locations.State:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /locations/countries/{country_id}:
+    get:
+      consumes:
+      - application/json
+      description: GetCoundry by countryID (external api)
+      parameters:
+      - description: Country ID
+        in: path
+        name: country_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/locations.Country'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/errors.ApiError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/errors.ApiError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/errors.ApiError'
+      summary: GetCountry
+swagger: "2.0"
